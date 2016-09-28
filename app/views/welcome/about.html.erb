@@ -1,3 +1,11 @@
+
+<style>
+	h1, h3, p, ul {
+		color: <%= @color %>
+	}
+</style>
+
+
 <h1>About Chantelle</h1>
 <p>The girl behind the bucket list!</p>
 <p>I love (in no particular order):
@@ -17,3 +25,10 @@
 		<li>all 7 continents by the time I'm 35 (3 down, 4 to go!)</li>
 	</ul>
 </p>
+
+<p>My favorite color is <%= @color %></p>
+
+<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
+<%= link_to "Red", about_path(color: "red"), class: "btn btn-danger" %>
+<%= link_to "Green", about_path(color: "green"), class: "btn btn-success" %>
+<%= link_to "Yellow", about_path(color: "yellow"), class: "btn btn-warning" %>

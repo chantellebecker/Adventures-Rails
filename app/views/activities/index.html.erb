@@ -2,6 +2,8 @@
 
 <h1>Activities</h1>
 
+
+
 <table>
   <thead>
     <tr>
@@ -31,3 +33,10 @@
 <br>
 
 <%= link_to 'New Activity', new_activity_path %>
+
+
+<ul>
+  <% @images.shuffle.each do |pics| %>
+    <%= image_tag pics, class: "img-responsive" %>
+  <% end %>
+</ul>
